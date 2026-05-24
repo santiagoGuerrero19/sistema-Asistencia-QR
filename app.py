@@ -4,7 +4,6 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from datetime import datetime
 import qrcode
-import socket
 
 app = Flask(__name__)
 
@@ -62,10 +61,6 @@ def formatear_excel():
 
     libro.save(ARCHIVO_EXCEL)
     libro.close()
-def obtener_ip_local():
-    hostname = socket.gethostname()
-    ip_local = socket.gethostbyname(hostname)
-    return ip_local
 
 @app.route('/')
 def inicio():
@@ -163,13 +158,10 @@ def logout():
 
 @app.route('/qr')
 def mostrar_qr():
-    ip_local = obtener_ip_local()
-    url_formulario = f'http://{ip_local}:5000/'
+
+    url_formulario = 'https://sistema-asistencia-qr-3zp5.onrender.com/'
 
     qr = qrcode.make(url_formulario)
     qr.save('static/qr_asistencia.png')
 
     return render_template('qr.html', url_formulario=url_formulario)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
