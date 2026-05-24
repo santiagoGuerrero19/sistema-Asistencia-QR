@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro exitoso</title>
+    <title>Registro existente</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
     <div class="contenedor exito-card">
-        <div class="icono-exito">✓</div>
 
-        <h1>Registro exitoso</h1>
+        <div class="icono-duplicado">
+            !
+        </div>
+
+        <h1>Asistencia ya registrada</h1>
 
         <p>
-            Tu asistencia fue registrada correctamente en el sistema.
+            Ya existe un registro para esta materia en la fecha actual.
         </p>
 
         <div class="acciones">
-            <a class="boton-secundario" href="/">Volver al formulario</a>
+            <a class="boton-secundario" href="/">
+                Volver al formulario
+            </a>
         </div>
+
     </div>
 
 </body>

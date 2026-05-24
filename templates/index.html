@@ -8,27 +8,39 @@
 </head>
 <body>
 
-    <h1>Registro de Asistencia</h1>
-    <p>Ingresa tus datos para registrar tu asistencia.</p>
+    <div class="contenedor">
+        <h1>Registro de Asistencia</h1>
+        <p>Ingresa tus datos para confirmar tu asistencia.</p>
 
-    <form action="/registrar" method="POST">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <form action="/registrar" method="POST">
 
-        <br><br>
+            <label>Nombre completo</label>
+            <input
+                type="text"
+                name="nombre"
+                required
+            >
 
-        <label for="codigo">Código de estudiante:</label>
-        <input type="text" id="codigo" name="codigo" required>
+            <label>Código de estudiante</label>
+            <input
+                type="text"
+                name="codigo"
+                required
+            >
 
-        <br><br>
+            <label>Materia</label>
+            <input
+                type="text"
+                name="materia"
+                required
+            >
 
-        <label for="materia">Materia o grupo:</label>
-        <input type="text" id="materia" name="materia" required>
+            <button type="submit">
+                Registrar asistencia
+            </button>
 
-        <br><br>
-
-        <button type="submit">Registrar asistencia</button>
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>

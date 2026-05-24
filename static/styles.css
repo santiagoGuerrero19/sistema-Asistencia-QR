@@ -72,3 +72,236 @@ button {
 button:hover {
     background: #1d4ed8;
 }
+.panel-admin {
+    background: white;
+    width: 95%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.boton-descarga {
+    display: inline-block;
+    margin: 15px 0 25px;
+    padding: 12px 18px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton-descarga:hover {
+    background: #15803d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+td {
+    color: #4b5563;
+}
+
+.exito-card {
+    text-align: center;
+}
+
+.icono-exito {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #16a34a;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.acciones {
+    justify-content: center;
+}
+
+.boton-secundario {
+    display: inline-block;
+    background: #477eee;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-secundario:hover {
+    background: #3569d4;
+}
+@media (max-width: 500px) {
+    .acciones {
+        flex-direction: column;
+    }
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f2f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+   top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('/static/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0.7;
+     filter: blur(3px);
+
+    z-index: -1;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.admin-header h1 {
+    margin: 0 0 8px;
+}
+
+.admin-header p {
+    margin: 0;
+}
+
+.resumen-admin {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.resumen-card {
+    background: #f3f4f6;
+    border-left: 5px solid #2563eb;
+    padding: 16px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.resumen-card span {
+    display: block;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.resumen-card strong {
+    font-size: 28px;
+    color: #1f2937;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.volver-admin {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.volver-admin:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .boton-descarga {
+        text-align: center;
+    }
+
+    .resumen-admin {
+        justify-content: center;
+    }
+}
+
+.icono-duplicado {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f59e0b;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-card {
+    text-align: center;
+}
+
+.qr-img {
+    width: 230px;
+    height: 230px;
+    margin: 20px auto;
+    display: block;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.url-qr {
+    font-size: 13px;
+    color: #6b7280;
+    word-break: break-all;
+}

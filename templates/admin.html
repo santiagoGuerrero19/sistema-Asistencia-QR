@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="panel-admin">
+
+        <div class="admin-header">
+            <div>
+                <h1>Panel de Administración</h1>
+                <p>Consulta y descarga los registros de asistencia.</p>
+            </div>
+
+            <a class="boton-descarga" href="/descargar">
+                Descargar Excel
+            </a>
+        </div>
+
+        <div class="resumen-admin">
+            <div class="resumen-card">
+                <span>Total de registros</span>
+                <strong>{{ registros|length }}</strong>
+            </div>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Código</th>
+                        <th>Materia</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for registro in registros %}
+                    <tr>
+                        <td>{{ registro.nombre }}</td>
+                        <td>{{ registro.codigo }}</td>
+                        <td>{{ registro.materia }}</td>
+                        <td>{{ registro.fecha }}</td>
+                        <td>{{ registro.hora }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <a class="volver-admin" href="/">Volver al formulario</a>
+
+    </div>
+
+</body>
+</html>
