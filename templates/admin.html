@@ -11,16 +11,22 @@
     <div class="panel-admin">
 
         <div class="admin-header">
-            <div>
-                <h1>Panel de Administración</h1>
-                <p>Consulta y descarga los registros de asistencia.</p>
-            </div>
+    <div>
+        <h1>Panel de Administración</h1>
+        <p>Consulta y descarga los registros de asistencia.</p>
+    </div>
 
-            <a class="boton-descarga" href="/descargar">
-                Descargar Excel
-            </a>
-        </div>
+    <div class="admin-botones">
+    <a class="boton-descarga" href="/descargar">
+        Descargar Excel
+    </a>
 
+    <a class="boton-logout" href="/logout">
+        Cerrar sesión
+    </a>
+</div>
+
+</div>
         <div class="resumen-admin">
             <div class="resumen-card">
                 <span>Total de registros</span>
@@ -52,9 +58,6 @@
                 </tbody>
             </table>
         </div>
-
-        <a class="volver-admin" href="/">Volver al formulario</a>
-
     </div>
 
 </body>

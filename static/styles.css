@@ -83,14 +83,9 @@ button:hover {
 }
 
 .boton-descarga {
-    display: inline-block;
-    margin: 15px 0 25px;
-    padding: 12px 18px;
     background: #16a34a;
     color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
 .boton-descarga:hover {
@@ -244,18 +239,6 @@ body::before {
     margin-bottom: 20px;
 }
 
-.volver-admin {
-    display: inline-block;
-    margin-top: 10px;
-    color: #2563eb;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.volver-admin:hover {
-    text-decoration: underline;
-}
-
 @media (max-width: 700px) {
     .admin-header {
         flex-direction: column;
@@ -304,4 +287,43 @@ body::before {
     font-size: 13px;
     color: #6b7280;
     word-break: break-all;
+}
+
+.mensaje-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.boton-logout {
+    background: #dc2626;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+.boton-logout:hover {
+    background: #b91c1c;
+}
+
+.admin-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-botones a {
+    width: 170px;
+    text-align: center;
+}
+.boton-descarga,
+.boton-logout {
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
 }
